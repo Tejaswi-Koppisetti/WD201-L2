@@ -3,6 +3,7 @@ const fs = require("fs");
 
 let homeContent = "";
 let projectContent = "";
+let registrationContent = "";
 
 fs.readFile("home.html", (err, home) => {
   if (err) {
@@ -32,6 +33,10 @@ http
     switch (url) {
       case "/project":
         response.write(projectContent);
+        response.end();
+        break;
+      case "/registration":
+        response.write(registrationContent);
         response.end();
         break;
       default:
