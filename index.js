@@ -18,6 +18,13 @@ fs.readFile("project.html", (err, project) => {
   projectContent = project;
 });
 
+fs.readFile("registration.html", (err, registration) => {
+  if (err) {
+    throw err;
+  }
+  registrationContent = registratiom;
+});
+
 http
   .createServer((request, response) => {
     let url = request.url;
