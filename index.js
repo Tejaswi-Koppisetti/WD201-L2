@@ -22,7 +22,7 @@ fs.readFile("registration.html", (err, registration) => {
   if (err) {
     throw err;
   }
-  registrationContent = registratiom;
+  registrationContent = registration;
 });
 
 http
